@@ -5,8 +5,12 @@ def print_color_map():
     minor_colors = ["Blue", "Orange", "Green", "Brown", "Slate"]
     for i, major in enumerate(major_colors):
         for j, minor in enumerate(minor_colors):
-            print(f'{i * 5 + j} | {major} | {minor}')
-            printed_list.append(f'{i * 5 + j} | {major} | {minor}')
+            if i * 5 + j > 9:
+                print(f'{i * 5 + j} | {major} | {minor}')
+                printed_list.append(f'{i * 5 + j} | {major} | {minor}')
+            else:
+                print(f'{i * 5 + j}  | {major} | {minor}')
+                printed_list.append(f'{i * 5 + j}  | {major} | {minor}')
     return len(major_colors) * len(minor_colors), printed_list
 
 
